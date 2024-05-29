@@ -22,6 +22,9 @@ body {
 
 /* Container for the app */
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background: linear-gradient(
       rgba(255, 255, 255, 0.952),
       rgba(255, 255, 255, 0.886)
@@ -29,16 +32,33 @@ body {
     url("https://i.pinimg.com/736x/b7/5a/f4/b75af42c64251fa92fb2cf36ac5d8324.jpg");
   background-size: contain;
   max-width: 600px;
+  max-height: 100vh;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  overflow-y: auto; /* Allow vertical scrolling inside the container */
+}
+
+/* Scrollbar styling */
+.container::-webkit-scrollbar {
+  width: 20px;
+}
+.container::-webkit-scrollbar-track {
+  background: #f4f4f4; 
+  border-radius: 10px;
+  margin:10px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: #532e0ac8;
+  border-radius: 8px;
+  border: 3px solid #f4f4f4;
 }
 
 .container > div {
   background-color: #dcce8325;
   height: 100%;
-  width: 100%;
   border-radius: 8px;
   padding: 20px;
 }
@@ -134,6 +154,9 @@ p {
 
 @media screen and (max-width: 500px) {
   body {
-    height: auto;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
   }
 }
