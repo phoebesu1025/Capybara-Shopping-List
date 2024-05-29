@@ -15,8 +15,8 @@ body {
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
-  flex-basis: 100vh;
   display: flex;
+  height: 100vh;
   align-items: center;
   justify-content: center;
 }
@@ -132,5 +132,11 @@ p {
   }
   100% {
     left: calc(80% - 100px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    height: auto;
   }
 }
