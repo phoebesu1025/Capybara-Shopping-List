@@ -15,7 +15,7 @@ body {
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
-  height: 100vh;
+  flex-basis: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
