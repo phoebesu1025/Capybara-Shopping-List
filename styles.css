@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Combo&family=Cute+Font&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Combo&family=Cute+Font&display=swap");
+
+/* Basic Reset */
+* {
+  font-family: "Carter One", system-ui;
+  font-weight: 700;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for the app */
+.container > div {
+  background-color: #dcce8325;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+}
+.container {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.952),
+      rgba(255, 255, 255, 0.886)
+    ),
+    url("https://i.pinimg.com/736x/b7/5a/f4/b75af42c64251fa92fb2cf36ac5d8324.jpg");
+  background-size: contain;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+/* Form row styling for item and quantity inputs */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Button styling */
+button {
+  padding: 10px;
+  background: #532f0ad0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #856018;
+}
+
+/* Paragraph styling */
+p {
+  margin-bottom: 20px;
+}
+
+/* Display areas */
+#shopping-list-display,
+#items-still-to-buy-display {
+  padding: 10px;
+  background: #c59c667d;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+#capybara {
+  position: relative;
+  bottom: 0px;
+  margin: -10px 0;
+  width: 100px;
+}
+
+#cart {
+  position: relative;
+  left: -80px;
+  bottom: 0px;
+  margin: -10px 0;
+
+  width: 100px;
+  animation: cart 10s ease-in-out infinite;
+}
+
+@keyframes cart {
+  0% {
+    left: -80px;
+  }
+  100% {
+    left: calc(80% - 100px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    margin: 50px 0;
+  }
+}

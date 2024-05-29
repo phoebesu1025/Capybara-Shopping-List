@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAPYBARA~🐹🐽</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="image.png" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <!-- Shopping List -->
+        <h1>Shopping List</h1>
+        <form>
+          <div>
+            <input type="text" id="item" placeholder="Item" /> x
+            <input type="number" id="quantity" placeholder="Quantity" />
+          </div>
+
+          <button onclick="addItem(event)">Add to List</button>
+        </form>
+
+        <p id="shopping-list-display"></p>
+
+        <h1>Shopping Basket</h1>
+
+        <p>
+          Enter all the products you've put into your shopping basket, separated
+          by commas, to see if you've forgotten anything
+        </p>
+
+        <form>
+          <input
+            type="text"
+            id="shopping-basket"
+            placeholder="e.g. tomato, eggs, milk"
+          />
+
+          <button onclick="addToBasket(event)">Add item(s) to basket</button>
+        </form>
+
+        <p id="items-still-to-buy-display"></p>
+
+        <img src="image.png" id="capybara" />
+        <img src="cart.png" id="cart" />
+      </div>
+    </div>
+  </body>
+</html>
