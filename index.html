@@ -13,38 +13,36 @@
       <div>
         <!-- Shopping List -->
         <h1>Shopping List</h1>
-        <form>
-          <div>
-            <input type="text" id="item" placeholder="Item" /> x
-            <input type="number" id="quantity" placeholder="Quantity" />
-          </div>
-
-          <button onclick="addItem(event)">Add to List</button>
+        <form onsubmit="addItem(event)">
+          <input type="text" id="item" placeholder="Item" required /> x
+          <input type="number" id="quantity" placeholder="Quantity" required />
+          <button type="submit">Add to List</button>
         </form>
 
         <p id="shopping-list-display"></p>
 
+        <hr />
         <h1>Shopping Basket</h1>
 
         <p>
           Enter all the products you've put into your shopping basket, separated
           by commas, to see if you've forgotten anything
         </p>
+        <br />
 
-        <form>
+        <form onsubmit="addToBasket(event)">
           <input
             type="text"
             id="shopping-basket"
             placeholder="e.g. tomato, eggs, milk"
           />
-
-          <button onclick="addToBasket(event)">Add item(s) to basket</button>
+          <button type="submit">Add item(s) to basket</button>
         </form>
 
         <p id="items-still-to-buy-display"></p>
 
         <img src="image.png" id="capybara" />
-        <img src="cart.png" id="cart" />
+        <!-- <img src="cart.png" id="cart" /> -->
       </div>
     </div>
   </body>

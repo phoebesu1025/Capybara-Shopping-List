@@ -24,6 +24,7 @@ function addItem(event) {
   shoppingList.push(itemToAdd);
   console.log(shoppingList);
   itemInputEl.value = "";
+  quantityInputEl.value = "";
 
   displayListItems();
 }
@@ -35,11 +36,11 @@ function displayListItems() {
   //for each item in the shoppingList array, display item, quantity, and a delete button​
   for (const groceryItem of shoppingList) {
     //update the HTML to what is currently rendered, plus a new string​
-    shoppingListDisplayEl.innerHTML += `${groceryItem.item} x ${
+    shoppingListDisplayEl.innerHTML += `<div><div>${groceryItem.item} x ${
       groceryItem.quantity
-    } <span onclick="deleteItem(${shoppingList.indexOf(
+    } </div><span onclick="deleteItem(${shoppingList.indexOf(
       groceryItem
-    )})"> &#10062 </span><br/>`;
+    )})" style="cursor:pointer"> &#10062 </span></div>`;
   }
 }
 
@@ -68,7 +69,7 @@ function addToBasket(event) {
       "Here are the items you still need to get:<br/>";
 
     itemsStillToBuy.forEach(function (groceryItem) {
-      itemsStillToBuyDisplayEl.innerHTML += `${groceryItem.item} x ${groceryItem.quantity} <br/>`;
+      itemsStillToBuyDisplayEl.innerHTML += `<div>${groceryItem.item} x ${groceryItem.quantity}</div>`;
     });
   }
 }
