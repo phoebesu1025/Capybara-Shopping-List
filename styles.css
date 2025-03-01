@@ -43,7 +43,7 @@ body {
 
 /* Scrollbar Styling */
 .container::-webkit-scrollbar {
-  width: 10px;
+  width: 1rem;
 }
 .container::-webkit-scrollbar-track {
   background: #f4f4f4;
