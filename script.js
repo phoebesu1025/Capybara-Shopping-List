@@ -66,10 +66,10 @@ function addToBasket(event) {
       "<p>Congrats! You are done shopping 🛍️ ➡️ 🏠: </p>";
   } else {
     itemsStillToBuyDisplayEl.innerHTML =
-      "Here are the items you still need to get:<br/>";
+      "<p>Here are the items you still need to get:</p>";
 
     itemsStillToBuy.forEach(function (groceryItem) {
-      itemsStillToBuyDisplayEl.innerHTML += `<div>${groceryItem.item} x ${groceryItem.quantity}</div>`;
+      itemsStillToBuyDisplayEl.innerHTML += `<p>${groceryItem.item} x ${groceryItem.quantity}</p>`;
     });
   }
 }
